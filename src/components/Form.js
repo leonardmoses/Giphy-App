@@ -22,7 +22,7 @@ const Form = (props) => {
 
   //The component must return some JSX
   return (
-    <div>
+    <div className="searchformdiv">
       <form onSubmit={handleSubmit}>
         <input
           type="text"

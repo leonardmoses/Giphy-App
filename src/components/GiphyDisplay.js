@@ -12,7 +12,7 @@ const GiphyDisplay = ( props ) => {
                 
                  
                 return (
-                    <div>
+                    <div className="giphysearchcomp">
                         <h1>{Giphy.data[randomNum].title}</h1>
                         <img src={Giphy.data[randomNum].images.original.url} alt="Giphy" />
                     </div>

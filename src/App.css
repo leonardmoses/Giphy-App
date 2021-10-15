@@ -1,4 +1,6 @@
-.App {
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +37,84 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.App {
+  /* padding-top: 100px; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-image: linear-gradient(rgb(27, 226, 27), rgb(231, 231, 231));
+}
+
+h1 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.title {
+  width: 100%;
+  /* background-color: yellow; */
+  text-align: center;
+  padding: 50px 0;
+  font-size: 40px;
+  color: rgb(0, 83, 25);
+}
+
+.SearchDiv {
+  width: 400px;
+  height: 500px;
+  /* background-color: red; */
+  margin: 0 auto;
+  contain: content;
+}
+
+.giphysearchcomp {
+  width: 100%;
+}
+
+.giphysearchcomp img{
+  border: solid black 1px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.giphysearchcomp h1{
+  height: 50px;
+  /* border: solid black 1px; */
+  text-align: center;
+  font-size: 20px;
+}
+
+.searchformdiv {
+  height: 30px;
+  text-align: center;
+}
+
+
+.RandomDiv {
+  width: 400px;
+  height: 500px;
+  /* background-color: green; */
+  margin: 0 auto;
+  contain: content;
+}
+
+.giphyrandomcomp img{
+  border: solid black 1px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.giphyrandomcomp h1{
+  height: 50px;
+  /* border: solid black 1px; */
+  text-align: center;
+  font-size: 20px;
+}
+
+.randomformdiv {
+  height: 30px;
+  text-align: center;
 }

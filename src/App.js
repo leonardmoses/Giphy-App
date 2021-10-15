@@ -40,14 +40,19 @@ function App() {
   // We pass the getGiphy function as a prop called Giphysearch
   return (
     <div className="App">
-      <div>
+      <div className="title">Giphy Search!</div>
+      <div className="SearchDiv">
         <Form Giphysearch={getGiphy} />
         <GiphyDisplay Giphy={Giphy} />
       </div>
 
-      <div>
-        <RandomForm GiphyRandomForm={getRandomGiphy} />
-        <GiphyRandom RandomGiphy={Giphy2} />
+      <div className="RandomDiv">
+        <div>
+          <RandomForm className="randomForm" GiphyRandomForm={getRandomGiphy} />
+        </div>
+        <div>
+          <GiphyRandom className="randomGiphy" RandomGiphy={Giphy2} />
+        </div>
       </div>
 
     </div>

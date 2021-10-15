@@ -21,7 +21,7 @@ const RandomForm = (props) => {
   //The component must return some JSX
   return (
     <div>
-      <button onClick={props.GiphyRandomForm}> 👇</button>
+      <button onClick={props.GiphyRandomForm}> Random Gif 👇</button>
     </div>
   );
 };

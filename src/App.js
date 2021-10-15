@@ -11,6 +11,7 @@ function App() {
   
   // 2. State to hold Giphy data
   const [Giphy, setGiphy] = React.useState(null);
+  const [Giphy2, setGiphy2] = React.useState(null);
 
   // 3. Function to getGiphys
   const getGiphy = async (searchTerm) => {
@@ -32,20 +33,27 @@ function App() {
     // 3b. Parse JSON response into a javascript object
     const data = await response.json();
     // 3c. set the Giphy state to the Giphy
-    setGiphy(data);
+    setGiphy2(data);
   };
 
   // USE OUR COMPONENTS IN APPs RETURNED JSX
   // We pass the getGiphy function as a prop called Giphysearch
   return (
     <div className="App">
-      <Form Giphysearch={getGiphy} />
-      <GiphyDisplay Giphy={Giphy} />
-      <RandomForm GiphyRandomForm={getRandomGiphy} />
-      <GiphyRandom RandomGiphy={Giphy} />
+      <div>
+        <Form Giphysearch={getGiphy} />
+        <GiphyDisplay Giphy={Giphy} />
+      </div>
+
+      <div>
+        <RandomForm GiphyRandomForm={getRandomGiphy} />
+        <GiphyRandom RandomGiphy={Giphy2} />
+      </div>
+
     </div>
   );
 }
 
 export default App;
+
 

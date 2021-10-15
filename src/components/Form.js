@@ -30,7 +30,7 @@ const Form = (props) => {
           onChange={handleChange}
           value={formData.searchTerm}
         />
-        <input type="submit" value="submit" />
+        <input type="submit" value="Search Gif" />
       </form>
     </div>
   );

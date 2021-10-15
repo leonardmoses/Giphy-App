@@ -2,19 +2,15 @@ import React from "react";
 
 
 // You can also destructure your props directly from the parameter list
-const GiphyDisplay = ( props ) => {
+const GiphyRandom = ( props ) => {
   //The component must return some JSX
-    const {Giphy} = props;
-            
+    const {RandomGiphy} = props;
             
             const loaded = () => {
-                let randomNum = Math.floor(Math.random() * Giphy.data.length)
-                
-                 
                 return (
                     <div>
-                        <h1>{Giphy.data[randomNum].title}</h1>
-                        <img src={Giphy.data[randomNum].images.original.url} alt="Giphy" />
+                        <h1>{RandomGiphy.data.title}</h1>
+                        <img src={RandomGiphy.data.image_url} alt="Giphy" />
                     </div>
                 )
             }
@@ -23,7 +19,7 @@ const GiphyDisplay = ( props ) => {
                 return <h1>No Giphy To Display</h1>
             }
     
-    return Giphy ? loaded() : loading();
+    return RandomGiphy ? loaded() : loading();
 }
     
-export default GiphyDisplay;
+export default GiphyRandom;

@@ -18,6 +18,7 @@ const Form = (props) => {
     // 3a. pass the search term to giphysearch prop, which is apps getMovie function
     props.Giphysearch(formData.searchTerm);
   };
+  
 
   //The component must return some JSX
   return (

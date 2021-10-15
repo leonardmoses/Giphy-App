@@ -1,10 +1,8 @@
 import React from "react";
 
-const Random = (props) => {
+const RandomForm = (props) => {
   // 1. State to hold the data of our form
-  const [formData, setFormData] = React.useState({
-    searchTerm: "",
-  });
+  const [formData, setFormData] = React.useState({null: "",});
 
   // 2. handleChange - updates formData when we type into form
   const handleChange = (event) => {
@@ -16,24 +14,19 @@ const Random = (props) => {
     // 3. prevent page from refreshing on form submission
     event.preventDefault();
     // 3a. pass the search term to giphysearch prop, which is apps getMovie function
-    props.Giphysearch(formData.searchTerm);
+    props.Giphysearch(formData);
   };
+  
 
   //The component must return some JSX
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="searchTerm"
-          onChange={handleChange}
-          value={formData.searchTerm}
-        />
-        <input type="submit" value="submit" />
-      </form>
+      <button onClick={props.GiphyRandomForm}> 👇</button>
     </div>
   );
 };
 
 // We must export the component to use it in other files
-export default Random;
+export default RandomForm;
+
+
